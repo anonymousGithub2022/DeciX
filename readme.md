@@ -67,7 +67,7 @@ The above figure shows the accuracy of explanations under three experiments.
  <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/case.png" width="600" height="200" alt="Design Overview"/><br/>
 </div>    
 
-The above figure visualizes the explanation results of selected tokens in the outputs.
+The above figure visualizes the explanation results of selected tokens in the outputs. The colored tokens are the reason that result in the target output tokens.
 
 
 
