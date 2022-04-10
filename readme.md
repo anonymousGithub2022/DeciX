@@ -45,19 +45,29 @@ So just run `bash bash1.sh`.
 
 
 <div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/exp1.png" width="800" height="300" alt="Design Overview"/><br/>
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/exp1.png" width="600" height="200" alt="Design Overview"/><br/>
 </div>    
 
 <div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/exp2.png" width="800" height="300" alt="Design Overview"/><br/>
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/exp2.png" width="600" height="200" alt="Design Overview"/><br/>
 </div>    
 
 <div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/exp3.png" width="800" height="300" alt="Design Overview"/><br/>
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/exp3.png" width="600" height="200" alt="Design Overview"/><br/>
 </div>    
 
 
 The above figure shows the accuracy of explanations under three experiments.
+
+
+## Case Study
+
+
+<div  align="center">    
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/case.png" width="600" height="200" alt="Design Overview"/><br/>
+</div>    
+
+The above figure visualizes the explanation results of selected tokens in the outputs.
 
 
 
