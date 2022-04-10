@@ -26,14 +26,40 @@ At a high level, *CodeGenExp* includes four main steps: (i) causal input prepara
   * **./src/xai** -the lib that includes the implementation of each explanation methods.
     * **./src/xai/lemna** - the implementaion of lemna.
     * **./src/xai/lime** - the implementaion of lime.
-    * * **./src/xai/codeexpgen** - the implementaion of our approach.
+    * **./src/xai/codeexpgen** - the implementaion of our approach.
  
 * **utils.py** -the basical functions to load DNNs.
-* **generate_adv.py** -the script is used for generating test samples.
-* **measure_latency.py** -this script measures the latency/energy consumption of the generated adversarial examples.
-* **measure_loops.py**   -this script measures the iteration numbers of the generated adversarial examples.
-* **measure_senstive.py** -this script measures the hyperparameter senstivelity.
-* **gpuXX.sh** -bash script to run experiments (**XX** are integer numbers).
+* **generate_explanation.py** -the script is used for explanation each DL-based code generation applications.
+* **evaluate_explanation.py** -this script is used to evaluate the accuracy of the explanations.
+* **post_acc.py**.   -get the accuracy results.
+* **bashXX.sh** -bash script to run experiments (**XX** are integer numbers).
+
+## How to run
+
+We provide the bash script that generate adversarial examples and measure the efficiency in **bash1.sh**. **bash2.sh**, **bash3.sh**, are implementing the similar functionality but for different gpus. 
+
+So just run `bash bash1.sh`.
+
+
+## Accuracy of Explanations
+
+
+<div  align="center">    
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/exp1" width="800" height="300" alt="Design Overview"/><br/>
+</div>    
+
+<div  align="center">    
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/exp2" width="800" height="300" alt="Design Overview"/><br/>
+</div>    
+
+<div  align="center">    
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/exp3" width="800" height="300" alt="Design Overview"/><br/>
+</div>    
+
+
+The above figure shows the accuracy of explanations under three experiments.
+
+
 
 
 
