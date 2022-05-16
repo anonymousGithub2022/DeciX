@@ -1,7 +1,7 @@
 # Rebuttal
 
 <div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/more.png" width="800" height="300" alt="Design Overview"/><br/>
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/more.png" width="800" height="800" alt="Design Overview"/><br/>
 </div>    
 The above Figure shows the results of two more baselines (RANDOM and SHAP).
 
