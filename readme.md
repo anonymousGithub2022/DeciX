@@ -1,9 +1,13 @@
 # Rebuttal
 
+## Comparsion with more baselines
+
 <div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/more.png" width="900" height="700" alt="Design Overview"/><br/>
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/more.jpg" width="900" height="700" alt="Design Overview"/><br/>
 </div>    
 The above Figure shows the results of two more baselines (RANDOM and SHAP).
+
+## 
 
 
 
