@@ -12,9 +12,6 @@ The above Figure shows the results of two more baselines (RANDOM and SHAP).
 
 
 # CodeGenExp
-<div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/codeexp.png" width="800" height="300" alt="Design Overview"/><br/>
-</div>    
 
 
 *CodeGenExp* is designed to explain deep learning-based code generation applications.
@@ -25,8 +22,9 @@ In detail, *CodeGenExp* provides token-level explanations by constructing a caus
 ## Design Overview
 
 <div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/codeexp.png" width="800" height="300" alt="Design Overview"/><br/>
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/overview.jpg" width="800" height="300" alt="Design Overview"/><br/>
 </div>    
+
 
 
 The design overview of *CodeGenExp* is shown in the above figure. 
