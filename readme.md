@@ -55,7 +55,7 @@ We provide the bash script that generate adversarial examples and measure the ef
 So just run `bash bash1.sh`.
 
 
-## Accuracy of Explanations
+<!-- ## Accuracy of Explanations
 
 
 <div  align="center">    
@@ -71,7 +71,7 @@ So just run `bash bash1.sh`.
 </div>    
 
 
-The above figure shows the accuracy of explanations under three experiments.
+The above figure shows the accuracy of explanations under three experiments. -->
 
 
 ## Case Study
