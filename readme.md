@@ -25,7 +25,7 @@ As indicated in our paper, we did not set a fixed number of masked/revealed toke
  <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/fig5.jpg" width="900" height="650" alt="Design Overview"/><br/>
 </div>    
 The above Figure shows modified veersion of Fig.5, where we point out the most (only one, and the visualization number is configurable) important input tokens for each otput token. We color the input token that contributes multiple output tokens with different color.
-
+Token ***query*** dominates four output tokens, and token ***for*** dominates five output tokens.
 
 # CodeGenExp
 
