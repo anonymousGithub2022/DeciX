@@ -1,9 +1,9 @@
-# CodeGenExp
+# DeciX
 
 
-*CodeGenExp* is designed to explain deep learning-based code generation applications.
-*CodeGenExp* can (i) model the Markov dependency in code generation applications; (ii) handle the non-numberic data format; (iii) supporting black-box settings.
-In detail, *CodeGenExp* provides token-level explanations by constructing a causal relation graph and decomposing the edge weights in the graph. 
+*DeciX* is designed to explain deep learning-based code generation applications.
+*DeciX* can (i) model the output-output dependency in code generation applications; (ii) handle the non-numberic data format; (iii) supporting black-box settings.
+In detail, *DeciX* provides token-level explanations by constructing a causal relation graph and decomposing the edge weights in the graph. 
 
 
 ## Design Overview
@@ -14,8 +14,8 @@ In detail, *CodeGenExp* provides token-level explanations by constructing a caus
 
 
 
-The design overview of *CodeGenExp* is shown in the above figure. 
-At a high level, *CodeGenExp* includes four main steps: (i) causal input preparation, (ii) causal graph construction, (iii) graph weight computation, and (iv) weight decomposition. For the detailed design of each step, we refer the readers to our paper.
+The design overview of *DeciX* is shown in the above figure. 
+At a high level, *DeciX* includes four main steps: (i) causal input preparation, (ii) causal graph construction, (iii) graph weight computation, and (iv) weight decomposition. For the detailed design of each step, we refer the readers to our paper.
 
 
 ## File Structure
