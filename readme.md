@@ -1,32 +1,3 @@
-# Rebuttal
-
-## Comparsion with more baselines
-
-<div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/more.jpg" width="900" height="650" alt="Design Overview"/><br/>
-</div>    
-The above Figure shows the results of two more baselines (RANDOM and SHAP).
-
-## Exact Number of Masked/Reveersed Tokens
-
-As indicated in our paper, we did not set a fixed number of masked/revealed tokens because different inputs contain a different number of tokens in code generation applications. Instead, we mask the same percentage of the input tokens and compute the PCR. The table below depicts the distribution of input token numbers as well as the distribution of masked/revealed tokens.
-
-
-|Model|Input Length| | |# of Masked Token (20%)| | |
-|:----|:----|:----|:----|:----|:----|:----|
-| |min|avg.|max|min|avg.|max|
-|DeepAPI|2|11|48|1|4|10|
-|CodeBERT|10|52|409|3|12|81|
-|PyGPT2|4|18|57|1|4|12|
-
-## Modification of Fig. 5
-
-<div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/fig5.jpg" width="900" height="650" alt="Design Overview"/><br/>
-</div>    
-The above Figure shows modified veersion of Fig.5, where we point out the most (only one, and the visualization number is configurable) important input tokens for each otput token. We color the input token that contributes multiple output tokens with different color.
-Token **query** dominates four output tokens, and token **for** dominates five output tokens.
-
 # CodeGenExp
 
 
