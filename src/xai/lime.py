@@ -1,7 +1,6 @@
 import torch
 import torch.nn.functional as F
 from captum._utils.models.linear_model import SkLearnLinearRegression, SkLearnLasso
-#!/usr/bin/env python3
 import inspect
 import math
 import typing

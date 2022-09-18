@@ -6,7 +6,7 @@ def load_GPT2_model():
     tokenizer = AutoTokenizer.from_pretrained("SIC98/GPT2-python-code-generator")
     model = AutoModelForCausalLM.from_pretrained("SIC98/GPT2-python-code-generator")
 
-    with open("/home/sxc180080/data/Project/CodeGenExp/src/GPT2/data/test.csv", 'r') as csvfile:
+    with open("./data/PyGPT2/test.csv", 'r') as csvfile:
         data = csvfile.readlines()
     data = ''.join(data[1:]).split('<EOS>')
     data = [d.replace('<BOS>', '') for d in data]
