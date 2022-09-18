@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-CUDA_VISIBLE_DEVICES=1 python evaluate_explanation.py --task=0
+CUDA_VISIBLE_DEVICES=5 python evaluate_explanation.py --task=0

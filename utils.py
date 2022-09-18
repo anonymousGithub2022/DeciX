@@ -1,18 +1,41 @@
 import os
 from src import *
 
-if not os.path.isdir('./results'):
-    os.mkdir('./results')
 
 TASK_LIST = [
     'deepAPI',
     'CodeBert',
     'GPT2'
 ]
-for take_name in TASK_LIST:
-    sub_dir = './results/' + take_name
-    if not os.path.isdir(sub_dir):
-        os.mkdir(sub_dir)
+
+EXPLAIN_LIST = [
+    DepCausalExp,         # full Markov dependency + casuality
+    NoDepCausalExp,       # Np dependency decomposition + casuality
+    DepLinearExp,         # full Markov dependency  + linear
+
+    RandomExp,            # random explanation
+
+    # MarkovCausalExp,      # first-order Markov dependency + casuality
+    # CausalExp,            # casuality + no decomposition
+    # MarkovLinearExp,      # first-order Markov dependency + linear
+
+    LimeExp,  # lime explanation
+    LemnaExp,  # lemna explanation
+    # SHAPExp,  # shape explanation
+
+]
+
+'''
+    deepAPI: 
+        x: 1, X, X, 2.      len = 2  
+        y: X, X, X, 2.      len = 4
+    CodeBert:
+        x: 0, X, X, 2.      len = 4
+        y: 0, X, X, 2.      len = 4
+    GPT2
+        x: X, X, X, X.      len = 4
+        y: X, X, X, X.      len = 4
+'''
 
 
 def _load_deepAPI():
@@ -63,3 +86,5 @@ def load_model_data(task_id):
     assert type(vocab_tgt) == dict
     assert type(vocab_tgt) == dict
     return model, test_loader, vocab_tgt, vocab_src
+
+
