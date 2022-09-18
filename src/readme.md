@@ -8,6 +8,6 @@ This directory inculdes our main implementation code.
 * **./DeepAPI** - the code for the application of **DeepAPI**, which is downloaded from [DeepAPI](https://github.com/guxd/deepAPI)
 * **./wrapper_model.py** - the wrapper model of the mentioned applications.
 * **./xai** -the lib that includes the implementation of each explanation methods.
-  * **./xai/lemna** - the implementaion of lemna.
-  * **./xai/lime** - the implementaion of lime.
+  * **./xai/lemna** - the implementaion of lemna, which reuses the code from the authors open source repository [LEMNA](https://github.com/Henrygwb/Explaining-DL).
+  * **./xai/lime** - the implementaion of lime, which is based on the library of (captum)[https://github.com/pytorch/captum].
   * **./xai/codeexpgen** - the implementaion of our approach.
