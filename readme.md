@@ -44,7 +44,7 @@ Second, activate the virtual environment.
 `conda activate your_env_name`.
 Next, install the basic library dependency.
 `pip install requirement.txt`.
-Finally, download the pre-trained model weights from [model_weight](https://drive.google.com/drive/folders/1KJBahf25i9ttQr8VWF8tA9e87IBw5Q0E?usp=sharing)
+Finally, download the pre-trained model weights from (model_weight)[https://drive.google.com/drive/folders/1KJBahf25i9ttQr8VWF8tA9e87IBw5Q0E?usp=sharing]
 and put the model weights in the directory `model_weight`.
 The model weights will be `model_weight/deepAPI` and `model_weight/code2seq_java_small.ckpt`.
 

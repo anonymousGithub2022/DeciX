@@ -17,8 +17,8 @@ for task_id in [0, 1, 2]:
 
     explain_list = [
         DepCausalExp,
-        NoDepCausalExp,
-        DepLinearExp,
+        # NoDepCausalExp,
+        # DepLinearExp,
         LimeExp,
         LemnaExp,
         RandomExp,
