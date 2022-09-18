@@ -38,12 +38,16 @@ At a high level, *DeciX* includes four main steps: (i) causal input preparation,
 
 ## Setup
 We strongly recommend the user use the *conda* to manage the virtual environment.
+
 First create an environment with *conda*.
 `conda create -n your_env_name python=3.7`
+
 Second, activate the virtual environment.
 `conda activate your_env_name`.
+
 Next, install the basic library dependency.
 `pip install -r requirement.txt`.
+
 Finally, download the pre-trained model weights from [model_weight](https://drive.google.com/drive/folders/1KJBahf25i9ttQr8VWF8tA9e87IBw5Q0E?usp=sharing)
 and put the model weights in the directory `model_weight`.
 The model weights will be `model_weight/deepAPI` and `model_weight/pytorch_model.bin`.
@@ -52,8 +56,11 @@ The model weights will be `model_weight/deepAPI` and `model_weight/pytorch_model
 ## Quick Start
 
 We have run the explanation scripts offline and stored the explanation results in the directory `exp_res`. 
+
 To quickly evaluate the explanation quality, run `bash demo_bash1.sh`, `bash demo_bash2.sh` and `bash demo_bash3.sh`. 
+
 After that, run `python post_acc.py` to plot the figures.
+
 All explanation results are stored in the directory `final_res`.
 
 
