@@ -33,14 +33,33 @@ At a high level, *DeciX* includes four main steps: (i) causal input preparation,
 * **generate_explanation.py** -the script is used for explanation each DL-based code generation applications.
 * **evaluate_explanation.py** -this script is used to evaluate the accuracy of the explanations.
 * **post_acc.py**.   -get the accuracy results.
-* **bashXX.sh** -bash script to run experiments (**XX** are integer numbers).
+* **bashXX.sh** -bash script to run experiments (**XX** are integer numbers that represent the code generation model ID).
+* **requirement.txt** -the dependent libraries.
+
+## Setup
+We strongly recommend the user use the *conda* to manage the virtual environment.
+First create an environment with *conda*.
+`conda create -n your_env_name python=3.7`
+Second, activate the virtual environment.
+`conda activate your_env_name`.
+Next, install the basic library dependency.
+`pip install requirement.txt`.
+
+## Quick Start
+
+We have run the explanation scripts offline and stored the explanation results in the directory `exp_res`. 
+To quickly evaluate the explanation quality, run `bash demo_bash1.sh`, `bash demo_bash2.sh` and `bash demo_bash3.sh`. 
+After that, run `python post_acc.py` to plot the figures.
+All explanation results are stored in the directory `final_res`.
+
 
 ## How to run
 
 We provide the bash script that generate adversarial examples and measure the efficiency in **bash1.sh**. **bash2.sh**, **bash3.sh**, are implementing the similar functionality but for different gpus. 
 
-So just run `bash bash1.sh`.
-
+So just run `bash bash1.sh`, `bash bash2.sh`, and `bash bash3.sh`.
+ 
+After get the results, run `python post_acc.py` to plot the results.
 
 <!-- ## Accuracy of Explanations
 

@@ -15,14 +15,8 @@ EXPLAIN_LIST = [
 
     RandomExp,            # random explanation
 
-    # MarkovCausalExp,      # first-order Markov dependency + casuality
-    # CausalExp,            # casuality + no decomposition
-    # MarkovLinearExp,      # first-order Markov dependency + linear
-
     LimeExp,  # lime explanation
     LemnaExp,  # lemna explanation
-    # SHAPExp,  # shape explanation
-
 ]
 
 '''
@@ -39,8 +33,8 @@ EXPLAIN_LIST = [
 
 
 def _load_deepAPI():
-    data_dir = '/home/sxc180080/data/Project/CodeGenExp/data/deepAPI/'
-    model_path = '/home/sxc180080/data/Project/CodeGenExp/model_weight/deepAPI/model_epo120000.pkl'
+    data_dir = './data/deepAPI/'
+    model_path = './model_weight/deepAPI/model_epo120000.pkl'
     model, test_loader, vocab_api, vocab_desc =\
         load_deepAPI_model_data(data_dir, model_path)
     model = Wrapper_DeepAPI(model, len(vocab_desc))
@@ -48,11 +42,11 @@ def _load_deepAPI():
 
 
 def _load_CodeBert():
-    model_path = '/home/sxc180080/data/Project/CodeGenExp/src/CodeBert/roberta/checkpoint-best-bleu/pytorch_model.bin'
+    model_path = './model_weight/pytorch_model.bin'
     data_path = ''.join([
-        '/home/sxc180080/data/Project/Dataset/CodeXGlue/code-to-code/test.java-cs.txt.java'
+        './data/code-to-code/test.java-cs.txt.java'
         ','
-        '/home/sxc180080/data/Project/Dataset/CodeXGlue/code-to-code/test.java-cs.txt.cs'
+        './data/code-to-code/test.java-cs.txt.cs'
     ])
     model, test_loader, vocab_tgt, vocab_src = \
         load_CodeBert_model_data(data_path, model_path, beam_size=1)

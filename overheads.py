@@ -10,7 +10,6 @@ IS_EVALUATION = False
 MAX_TEST_NUM = 20 if IS_EVALUATION else 1000
 
 
-
 def main(task_id):
     model, test_loader, vocab_tgt, vocab_src = load_model_data(task_id)
     model = model.to(device)

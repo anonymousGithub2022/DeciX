@@ -2,8 +2,9 @@ import os
 
 import numpy as np
 import torch
-import matplotlib.pyplot as plt
+import matplotlib
 
+import matplotlib.pyplot as plt
 from utils import EXPLAIN_LIST
 from utils import *
 

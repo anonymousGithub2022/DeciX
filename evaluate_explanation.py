@@ -1,14 +1,8 @@
 import os.path
 
-import matplotlib.pyplot as plt
-import time
-
-import numpy as np
-import torch
-
 from utils import *
 
-MAX_TEST_NUM = 300
+MAX_TEST_NUM = 10
 device = torch.device('cuda')
 
 if not os.path.isdir('res'):
@@ -102,6 +96,6 @@ if __name__ == '__main__':
         torch.cuda.manual_seed(seed)
 
     parser = argparse.ArgumentParser(description='Measure Latency')
-    parser.add_argument('--task', default=0, type=int, help='experiment subjects')
+    parser.add_argument('--task', default=1, type=int, help='experiment subjects')
     args = parser.parse_args()
     main(args.task)
