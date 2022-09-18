@@ -10,7 +10,7 @@ huggingface-hub==0.9.1
 idna==3.4
 joblib==1.2.0
 kiwisolver==1.4.4
-matplotlib==3.6.0
+matplotlib==3.1.0
 nltk==3.7
 numexpr==2.8.3
 numpy==1.23.3
