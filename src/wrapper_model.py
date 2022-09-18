@@ -10,27 +10,12 @@ class Wrapper_Base(nn.Module):
         self.max_length = self.model.max_length
         self.batch_num = 50
         self.mutate_num = 500
-        self.mutate_rate = 0.8
+        self.mutate_rate = 0.5
         self.src_vocab_size = src_vocab_size
-        self.tokenizer = model.tokenizer
+        # self.tokenizer = model.tokenizer
 
     def set_device(self, device):
         self.device = device
-
-    def perturb_inputs(self, x, **kwargs):
-        ori_inputs, ori_len = x
-        assert len(ori_inputs) == 1
-        batch_size, input_length = ori_inputs.shape
-
-        mutated_x = ori_inputs.repeat((self.mutate_num, 1)).to(self.device)
-        mutated_len = ori_len.repeat((self.mutate_num, 1)).to(self.device)
-        random_x = (torch.rand([self.mutate_num, input_length], device=self.device) * self.src_vocab_size).int()
-        mask = (torch.rand([self.mutate_num, input_length], device=self.device) < self.mutate_rate).float()
-        mask[:, 0] = 1
-        mask[:, ori_len + 1:] = 1
-        mutated_x = random_x * (1 - mask) + mutated_x * mask
-        mutated_x = mutated_x.to(torch.int64).to(self.device)
-        return mutated_x, mutated_len, mask
 
     def bernoulli_perturb(self, x, **kwargs):
         ori_inputs, ori_len = x
@@ -60,6 +45,13 @@ class Wrapper_Base(nn.Module):
         mutated_y = torch.cat(mutated_y)
         return mutated_y
 
+    def format_input_baseline(self, x, oov_tk):
+        ori_inputs, ori_len = x
+        baseline = torch.ones_like(ori_inputs) * oov_tk
+        baseline[:, 0] = ori_inputs[:, 0]
+        baseline[:, ori_len + 1] = ori_inputs[:, ori_len + 1]
+        return baseline, ori_len
+
 
 class Wrapper_DeepAPI(Wrapper_Base):
     def __init__(self, model, src_vocab_size):
@@ -68,6 +60,8 @@ class Wrapper_DeepAPI(Wrapper_Base):
         self.SOS_ID = 1
         self.EOS_ID = 2
         self.UNK_ID = 3
+        self.batch_num = 250
+        self.task = 'DeepAPI'
 
     def get_embedding(self, src_seqs, src_lens):
         return self.model.get_embedding(src_seqs, src_lens)
@@ -75,6 +69,21 @@ class Wrapper_DeepAPI(Wrapper_Base):
     def forward(self, src_seqs, src_lens, max_length=None, index=None):
         src_seqs, src_lens = src_seqs.to(self.device), src_lens.to(self.device)
         return self.model(src_seqs, src_lens, max_length, index)
+
+    def perturb_inputs(self, x, **kwargs):
+        ori_inputs, ori_len = x
+        assert len(ori_inputs) == 1
+        batch_size, input_length = ori_inputs.shape
+
+        mutated_x = ori_inputs.repeat((self.mutate_num, 1)).to(self.device)
+        mutated_len = ori_len.repeat((self.mutate_num, 1)).to(self.device)
+        random_x = (torch.rand([self.mutate_num, input_length], device=self.device) * self.src_vocab_size).int()
+        mask = (torch.rand([self.mutate_num, input_length], device=self.device) < self.mutate_rate).float()
+        mask[:, 0] = 1
+        mask[:, ori_len + 1:] = 1
+        mutated_x = random_x * (1 - mask) + mutated_x * mask
+        mutated_x = mutated_x.to(torch.int64).to(self.device)
+        return mutated_x, mutated_len, mask
 
 
 class Wrapper_CodeBert(Wrapper_Base):
@@ -88,6 +97,8 @@ class Wrapper_CodeBert(Wrapper_Base):
         self.UNK_ID = 3
         self.max_length = self.model.max_length
         self.tokenizer = model.tokenizer
+        self.task = 'CodeBert'
+        self.batch_num = 100
 
     def get_embedding(self, src_seqs, src_lens):
         mask = torch.zeros_like(src_seqs)
@@ -114,6 +125,21 @@ class Wrapper_CodeBert(Wrapper_Base):
 
         return predict_likehood
 
+    def perturb_inputs(self, x, **kwargs):
+        ori_inputs, ori_len = x
+        assert len(ori_inputs) == 1
+        batch_size, input_length = ori_inputs.shape
+
+        mutated_x = ori_inputs.repeat((self.mutate_num, 1)).to(self.device)
+        mutated_len = ori_len.repeat((self.mutate_num, 1)).to(self.device)
+        random_x = (torch.rand([self.mutate_num, input_length], device=self.device) * self.src_vocab_size).int()
+        mask = (torch.rand([self.mutate_num, input_length], device=self.device) < self.mutate_rate).float()
+        mask[:, 0] = 1
+        mask[:, ori_len - 1:] = 1
+        mutated_x = random_x * (1 - mask) + mutated_x * mask
+        mutated_x = mutated_x.to(torch.int64).to(self.device)
+        return mutated_x, mutated_len, mask
+
 
 class Wrapper_GPT2(Wrapper_Base):
     def __init__(self, model, src_vocab_size):
@@ -125,6 +151,8 @@ class Wrapper_GPT2(Wrapper_Base):
         self.UNK_ID = None
         self.model.max_length = 100  # model.config.max_length
         self.max_length = 100
+        self.task = 'GPT2'
+        self.batch_num = 100
 
     def get_embedding(self, src_seqs, src_lens):
         vec = self.model.transformer.wte(src_seqs)
