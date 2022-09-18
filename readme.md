@@ -1,7 +1,7 @@
 # DeciX
 
 
-*DeciX* is designed to explain deep learning-based code generation applications.
+*DeciX* is a **DE**pendency-aware **C**ausal **I**nference framework for e**X**plaining the decision-making in deep learning-based code generation applications.
 *DeciX* can (i) model the output-output dependency in code generation applications; (ii) handle the non-numberic data format; (iii) supporting black-box settings.
 In detail, *DeciX* provides token-level explanations by constructing a causal relation graph and decomposing the edge weights in the graph. 
 
