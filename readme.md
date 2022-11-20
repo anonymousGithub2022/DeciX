@@ -23,13 +23,13 @@ In our step 4, we decompose the output-output dependency in our previous step.
 
 
 
-## Fine-grained Overheads of DeciX
+## Fine-grained Overheads of DeciX (s)
 
 | **Model**    | **Step 1** | **Step 2** | **Step 3** | **Step 4** | **Total Overheads** |
 |--------------|------------|------------|------------|------------|----------------------|
-| **DeepAPI**  | 2.4        | 0.0          | 0.3        | 0.1      | 2.8                  |
+| **DeepAPI**  | 2.4       | 0.0          | 0.3        | 0.1      | 2.8                  |
 | **CodeBERT** | 104.2      | 0.0          | 19.9       | 0.1      | 124.2                |
-| **PyGPT2**   | 23.0       | 0.0          | 2.0        | 0.1      | 25.1                 |
+| **PyGPT2**   | 23.0      | 0.0          | 2.0        | 0.1      | 25.1                 |
 
 The above Table shows the fine-grained overheads of DeciX explaining one data instance (For LIME and LEMNA, we use the API call to extract explanation and thus can not get the fine-grained overheads). 
 The main overheads of DeciX come from step 1. This is because Decix feeds many mutants to the code generation model for inference in step 1, and the inference overhead of the code generation model under explain occupies the main overheads of this step.
