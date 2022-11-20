@@ -44,7 +44,7 @@ The main overheads of DeciX come from step 1. This is because Decix feeds many m
 | **CodeBert** | 10                   | 72.51    | 46.04    | 409   |
 | **PyGPT2**   | 4                    | 17.38    | 7.73     | 47    |
 
-The input length statistics are shown in the above table.
+The input length statistics are shown in the above table.  Notice for CodeBERT, the input length is significant larger than the input length of other subjects.
 
 |   Model      | min                  | avg      | std      | max   |
 |--------------|----------------------|----------|----------|-------|
