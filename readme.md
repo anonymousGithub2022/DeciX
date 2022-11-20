@@ -16,7 +16,7 @@ In our step 1, we randomly select 20% of the input token and replace the selecte
 
 In our step 2, we construct the graph with two tyeps of edges based on the input token order and output token order.
 
-In our step 3, we treat each output token as target and train a regression model to fit the causal contribution scores. The above figure shows an example to compute the causal contribution scores for the third output token **now**.
+In step 3, we treat each output token as a target and train a regression model to fit the causal contribution scores. The above figure shows an example to compute the causal contribution scores for the third output token **now**. Although Decix and LIME both use a regression model in this step, Decix differentiates from LIME from the following two perspectives: (i) Decix fits a regression model on the binarized casual input/output, while LIME fits a regression model directly on the input/output. (ii) Decix considers not only the input token but also previous output tokens to fit the regression model (the green box in step 3), which is the unique part in Decix and does not exist in existing work.
 
 In our step 4, we decompose the output-output dependency in our previous step.
 
