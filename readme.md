@@ -16,7 +16,7 @@ In our step 1, we randomly select 20% of the input token and replace the selecte
 
 In our step 2, we construct the graph with two tyeps of edges based on the input token order and output token order.
 
-In our step 3, we treat each output token as target and train a regression model to fit the causal contribution scores. The above figure shows an example to compute the causal contribution scores for the third output token "now".
+In our step 3, we treat each output token as target and train a regression model to fit the causal contribution scores. The above figure shows an example to compute the causal contribution scores for the third output token **now**.
 
 In our step 4, we decompose the output-output dependency in our previous step.
 
