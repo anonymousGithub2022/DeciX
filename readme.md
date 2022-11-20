@@ -10,6 +10,16 @@ In detail, *DeciX* provides token-level explanations by constructing a causal re
 XXX
 
 
+## Input/Output Length 
+
+| **Model**    | **** | **Input** | **Statistics** | **** |  | **Output** | **Statistics** | ** ** |
+|--------------|----------------------|----------|----------|----------|-----------------------|----------|----------|-------|
+| **null**     | min                  | avg      | std      | max      | min                   | avg      | std      | max   |
+| **DeepAPI**  | 2                    | 10.59    | 6.89     | 48       | 7                     | 18.26    | 13.94    | 50    |
+| **CodeBert** | 10                   | 52.51    | 46.04    | 409      | 10                    | 58.39    | 31.06    | 100   |
+| **PyGPT2**   | 4                    | 17.38    | 7.73     | 47       | 100                   | 100      | 0        | 100   |
+
+
 
 ## Design Overview
 
