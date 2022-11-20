@@ -9,8 +9,16 @@ In detail, *DeciX* provides token-level explanations by constructing a causal re
 ## A Demo Example to Explain DeciX
 
 <div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/detail.jpg" width="700" height="800" alt="Design Overview"/><br/>
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/detail.png" width="1440" height="1600" alt="Design Overview"/><br/>
 </div>    
+
+In our step 1, we randomly select 20% of the input token and replace the selected tokens with random tokens. We then compare the mutant with the original input and get the binarized causal input/output.
+
+In our step 2, we construct the graph with two tyeps of edges based on the input token order and output token order.
+
+In our step 3, we treat each output token as target and train a regression model to fit the causal contribution scores. The above figure shows an example to compute the causal contribution scores for the third output token "now".
+
+In our step 4, we decompose the output-output dependency in our previous step.
 
 
 
