@@ -24,7 +24,7 @@ In our step 4, we decompose the output-output dependency in our previous step.
 
 ## Average Overheads for Explaining One Token
 
-| **Model**    | **DeciX** | **LIME** | **LEMNA ** |
+| **Model**    | **DeciX** | **LIME** | **LEMNA** |
 |--------------|-----------|----------|------------|
 | **DeepAPI**  | 0.15      | 0.15     | 0.15       |
 | **CodeBERT** | 2.09      | 1.21     | 2.21       |
@@ -34,7 +34,7 @@ The above table shows the average overhead of explaining one output token. We us
 
 ## Fine-grained Overheads of DeciX
 
-| **Model**    | **Step 1** | **Step 2** | **Step 3** | **Step 4** | **Total Overheads ** |
+| **Model**    | **Step 1** | **Step 2** | **Step 3** | **Step 4** | **Total Overheads** |
 |--------------|------------|------------|------------|------------|----------------------|
 | **DeepAPI**  | 2.4        | 0.0          | 0.3        | 0.1      | 2.8                  |
 | **CodeBERT** | 104.2      | 0.0          | 19.9       | 0.1      | 124.2                |
