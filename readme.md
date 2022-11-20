@@ -9,7 +9,7 @@ In detail, *DeciX* provides token-level explanations by constructing a causal re
 ## A Demo Example to Explain DeciX
 
 <div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/detail.png" width="1440" height="1600" alt="Design Overview"/><br/>
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/detail.png" width="720" height="800" alt="Design Overview"/><br/>
 </div>    
 
 In our step 1, we randomly select 20% of the input token and replace the selected tokens with random tokens. We then compare the mutant with the original input and get the binarized causal input/output.
