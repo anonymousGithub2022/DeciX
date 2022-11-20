@@ -57,7 +57,11 @@ The output length statistics are shown in the above table. Notice for PyGPT2, it
 
 ## Compare with Other Baselines
 
+<div  align="center">    
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/more_exp.png" width="720" height="800" alt="Design Overview"/><br/>
+</div> 
 
+The above figure shows the results compared with other baselines. The results show that WT5 and MICE perform similarly to the Random baseline. This observation is because the WT5 and MICE are trained on the NLP corpus and are not suitable for explaining the code generation applications.
 
 
 ## Design Overview
