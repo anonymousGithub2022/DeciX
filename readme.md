@@ -5,6 +5,10 @@
 *DeciX* can (i) model the output-output dependency in code generation applications; (ii) handle the non-numberic data format; (iii) supporting black-box settings.
 In detail, *DeciX* provides token-level explanations by constructing a causal relation graph and decomposing the edge weights in the graph. 
 
+
+## A Demo Example to Explain DeciX
+
+
 ## Fine-grained Overheads of DeciX
 
 XXX
@@ -28,6 +32,9 @@ The input length statistics are shown in the above table.
 | **PyGPT2**   | 100                    | 100    |   0     | 100    |
 
 The output length statistics are shown in the above table. Notice for PyGPT2, it will not terminate untill it reaches the  configured maximum output length.
+
+
+## Compare with Other Baselines
 
 
 
