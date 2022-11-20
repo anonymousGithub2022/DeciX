@@ -12,13 +12,22 @@ XXX
 
 ## Input/Output Length 
 
-|--------------|----------------------|----------|----------|-------|
+
 |   Model      | min                  | avg      | std      | max   |
 |--------------|----------------------|----------|----------|-------|
 | **DeepAPI**  | 2                    | 10.59    | 6.89     | 48    |
 | **CodeBert** | 10                   | 52.51    | 46.04    | 409   |
 | **PyGPT2**   | 4                    | 17.38    | 7.73     | 47    |
 
+The input length statistics are shown in the above table.
+
+|   Model      | min                  | avg      | std      | max   |
+|--------------|----------------------|----------|----------|-------|
+| **DeepAPI**  | 7                |  18.26    | 13.94     | 50    |
+| **CodeBert** | 10                   | 58.39    | 31.06    | 100   |
+| **PyGPT2**   | 100                    | 100    |   0     | 100    |
+
+The output length statistics are shown in the above table. Notice for PyGPT2, it will not terminate untill it reaches the  configured maximum output length.
 
 
 
