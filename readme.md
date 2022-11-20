@@ -8,6 +8,11 @@ In detail, *DeciX* provides token-level explanations by constructing a causal re
 
 ## A Demo Example to Explain DeciX
 
+<div  align="center">    
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/detail.jpg" width="600" height="800" alt="Design Overview"/><br/>
+</div>    
+
+
 
 ## Average Overheads for Explaining One Token
 
