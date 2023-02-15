@@ -110,9 +110,7 @@ The output length statistics are shown in the above table. Notice for PyGPT2, it
 
 
 
-<hidden style="display:none">
- 
-## Compare with Other Baselines
+<!--  ## Compare with Other Baselines
 
 <div  align="center">    
  <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/more_exp.png" width="720" height="800" alt="Design Overview"/><br/>
@@ -159,7 +157,8 @@ The above figure shows the accuracy of explanations under three experiments. -->
 
 The above figure visualizes the explanation results of selected tokens in the outputs. The colored tokens are the reason that result in the target output tokens.
 
-</hidden>
+-->
+
 
 
 
