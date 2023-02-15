@@ -108,7 +108,9 @@ The input length statistics are shown in the above table.  Notice for CodeBERT, 
 
 The output length statistics are shown in the above table. Notice for PyGPT2, it will not terminate untill it reaches the  configured maximum output length.
 
-<hidden style="display:none">
+
+
+<div style="display:none">
  
 ## Compare with Other Baselines
 
@@ -128,10 +130,7 @@ The above figure shows the results compared with other baselines. The results sh
 
 The design overview of *DeciX* is shown in the above figure. 
 At a high level, *DeciX* includes four main steps: (i) causal input preparation, (ii) causal graph construction, (iii) graph weight computation, and (iv) weight decomposition. For the detailed design of each step, we refer the readers to our paper.
-</hidden>
 
-
-<div style="display:none">
 <!-- ## Accuracy of Explanations
 
 
