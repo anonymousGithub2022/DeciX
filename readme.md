@@ -129,7 +129,7 @@ The above figure shows the results compared with other baselines. The results sh
 The design overview of *DeciX* is shown in the above figure. 
 At a high level, *DeciX* includes four main steps: (i) causal input preparation, (ii) causal graph construction, (iii) graph weight computation, and (iv) weight decomposition. For the detailed design of each step, we refer the readers to our paper.
 
-<!-- ## Accuracy of Explanations
+## Accuracy of Explanations
 
 
 <div  align="center">    
@@ -145,7 +145,7 @@ At a high level, *DeciX* includes four main steps: (i) causal input preparation,
 </div>    
 
 
-The above figure shows the accuracy of explanations under three experiments. -->
+The above figure shows the accuracy of explanations under three experiments. 
 
 
 ## Case Study
@@ -155,9 +155,7 @@ The above figure shows the accuracy of explanations under three experiments. -->
  <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/case.png" width="600" height="200" alt="Design Overview"/><br/>
 </div>    
 
-The above figure visualizes the explanation results of selected tokens in the outputs. The colored tokens are the reason that result in the target output tokens.
-
--->
+The above figure visualizes the explanation results of selected tokens in the outputs. The colored tokens are the reason that result in the target output tokens.  -->
 
 
 
