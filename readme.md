@@ -149,6 +149,8 @@ After get the results, run `python post_acc.py` to plot the results.
 The above figure shows the accuracy of explanations under three experiments. -->
 
 
+
+<div style="display:none">
 ## Case Study
 
 
@@ -158,7 +160,7 @@ The above figure shows the accuracy of explanations under three experiments. -->
 
 The above figure visualizes the explanation results of selected tokens in the outputs. The colored tokens are the reason that result in the target output tokens.
 
-
+</div>
 
 
 
