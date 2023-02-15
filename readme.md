@@ -22,59 +22,6 @@ In our step 4, we decompose the output-output dependency in our previous step.
 
 
 
-
-## Fine-grained Overheads of DeciX (s)
-
-| **Model**    | **Step 1** | **Step 2** | **Step 3** | **Step 4** | **Total Overheads** |
-|--------------|------------|------------|------------|------------|----------------------|
-| **DeepAPI**  | 2.4       | 0.0          | 0.3        | 0.1      | 2.8                  |
-| **CodeBERT** | 104.2      | 0.0          | 19.9       | 0.1      | 124.2                |
-| **PyGPT2**   | 23.0      | 0.0          | 2.0        | 0.1      | 25.1                 |
-
-The above Table shows the fine-grained overheads of DeciX explaining one data instance (For LIME and LEMNA, we use the API call to extract explanation and thus can not get the fine-grained overheads). 
-The main overheads of DeciX come from step 1. This is because Decix feeds many mutants to the code generation model for inference in step 1, and the inference overhead of the code generation model under explain occupies the main overheads of this step.
-
-
-## Input/Output Length 
-
-
-|   Model      | min                  | avg      | std      | max   |
-|--------------|----------------------|----------|----------|-------|
-| **DeepAPI**  | 2                    | 10.59    | 6.89     | 48    |
-| **CodeBert** | 10                   | 72.51    | 46.04    | 409   |
-| **PyGPT2**   | 4                    | 17.38    | 7.73     | 47    |
-
-The input length statistics are shown in the above table.  Notice for CodeBERT, the input length is significant larger than the input length of other subjects.
-
-|   Model      | min                  | avg      | std      | max   |
-|--------------|----------------------|----------|----------|-------|
-| **DeepAPI**  | 7                |  18.26    | 13.94     | 50    |
-| **CodeBert** | 10                   | 78.39    | 31.06    | 100   |
-| **PyGPT2**   | 100                    | 100    |   0     | 100    |
-
-The output length statistics are shown in the above table. Notice for PyGPT2, it will not terminate untill it reaches the  configured maximum output length.
-
-<div style="display:none">
-## Compare with Other Baselines
-
-<div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/more_exp.png" width="720" height="800" alt="Design Overview"/><br/>
-</div> 
-
-The above figure shows the results compared with other baselines. The results show that WT5 and MICE perform similarly to the Random baseline. This observation is because the WT5 and MICE are trained on the NLP corpus and are not suitable for explaining the code generation applications.
-
-## Design Overview
-
-<div  align="center">    
- <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/overview.jpg" width="800" height="300" alt="Design Overview"/><br/>
-</div>    
-
-
-
-The design overview of *DeciX* is shown in the above figure. 
-At a high level, *DeciX* includes four main steps: (i) causal input preparation, (ii) causal graph construction, (iii) graph weight computation, and (iv) weight decomposition. For the detailed design of each step, we refer the readers to our paper.
-<\div>
-
 ## File Structure
 * **src** -main source codes.
   * **./src/CodeBert** - the application of CodeBert.
@@ -128,6 +75,60 @@ We provide the bash script that generate adversarial examples and measure the ef
 So just run `bash bash1.sh`, `bash bash2.sh`, and `bash bash3.sh`.
  
 After get the results, run `python post_acc.py` to plot the results.
+
+
+## Fine-grained Overheads of DeciX (s)
+
+| **Model**    | **Step 1** | **Step 2** | **Step 3** | **Step 4** | **Total Overheads** |
+|--------------|------------|------------|------------|------------|----------------------|
+| **DeepAPI**  | 2.4       | 0.0          | 0.3        | 0.1      | 2.8                  |
+| **CodeBERT** | 104.2      | 0.0          | 19.9       | 0.1      | 124.2                |
+| **PyGPT2**   | 23.0      | 0.0          | 2.0        | 0.1      | 25.1                 |
+
+The above Table shows the fine-grained overheads of DeciX explaining one data instance (For LIME and LEMNA, we use the API call to extract explanation and thus can not get the fine-grained overheads). 
+The main overheads of DeciX come from step 1. This is because Decix feeds many mutants to the code generation model for inference in step 1, and the inference overhead of the code generation model under explain occupies the main overheads of this step.
+
+
+## Input/Output Length 
+
+
+|   Model      | min                  | avg      | std      | max   |
+|--------------|----------------------|----------|----------|-------|
+| **DeepAPI**  | 2                    | 10.59    | 6.89     | 48    |
+| **CodeBert** | 10                   | 72.51    | 46.04    | 409   |
+| **PyGPT2**   | 4                    | 17.38    | 7.73     | 47    |
+
+The input length statistics are shown in the above table.  Notice for CodeBERT, the input length is significant larger than the input length of other subjects.
+
+|   Model      | min                  | avg      | std      | max   |
+|--------------|----------------------|----------|----------|-------|
+| **DeepAPI**  | 7                |  18.26    | 13.94     | 50    |
+| **CodeBert** | 10                   | 78.39    | 31.06    | 100   |
+| **PyGPT2**   | 100                    | 100    |   0     | 100    |
+
+The output length statistics are shown in the above table. Notice for PyGPT2, it will not terminate untill it reaches the  configured maximum output length.
+
+<hidden style="display:none">
+ 
+## Compare with Other Baselines
+
+<div  align="center">    
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/more_exp.png" width="720" height="800" alt="Design Overview"/><br/>
+</div> 
+
+The above figure shows the results compared with other baselines. The results show that WT5 and MICE perform similarly to the Random baseline. This observation is because the WT5 and MICE are trained on the NLP corpus and are not suitable for explaining the code generation applications.
+
+## Design Overview
+
+<div  align="center">    
+ <img src="https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/overview.jpg" width="800" height="300" alt="Design Overview"/><br/>
+</div>    
+
+
+
+The design overview of *DeciX* is shown in the above figure. 
+At a high level, *DeciX* includes four main steps: (i) causal input preparation, (ii) causal graph construction, (iii) graph weight computation, and (iv) weight decomposition. For the detailed design of each step, we refer the readers to our paper.
+</hidden>
 
 
 <div style="display:none">
