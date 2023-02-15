@@ -54,7 +54,7 @@ The input length statistics are shown in the above table.  Notice for CodeBERT, 
 
 The output length statistics are shown in the above table. Notice for PyGPT2, it will not terminate untill it reaches the  configured maximum output length.
 
-
+<div style="display:none">
 ## Compare with Other Baselines
 
 <div  align="center">    
@@ -62,7 +62,6 @@ The output length statistics are shown in the above table. Notice for PyGPT2, it
 </div> 
 
 The above figure shows the results compared with other baselines. The results show that WT5 and MICE perform similarly to the Random baseline. This observation is because the WT5 and MICE are trained on the NLP corpus and are not suitable for explaining the code generation applications.
-
 
 ## Design Overview
 
@@ -74,7 +73,7 @@ The above figure shows the results compared with other baselines. The results sh
 
 The design overview of *DeciX* is shown in the above figure. 
 At a high level, *DeciX* includes four main steps: (i) causal input preparation, (ii) causal graph construction, (iii) graph weight computation, and (iv) weight decomposition. For the detailed design of each step, we refer the readers to our paper.
-
+<\div>
 
 ## File Structure
 * **src** -main source codes.
@@ -130,6 +129,8 @@ So just run `bash bash1.sh`, `bash bash2.sh`, and `bash bash3.sh`.
  
 After get the results, run `python post_acc.py` to plot the results.
 
+
+<div style="display:none">
 <!-- ## Accuracy of Explanations
 
 
@@ -149,8 +150,6 @@ After get the results, run `python post_acc.py` to plot the results.
 The above figure shows the accuracy of explanations under three experiments. -->
 
 
-
-<div style="display:none">
 ## Case Study
 
 
