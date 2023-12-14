@@ -27,7 +27,7 @@ The hyperparameter study of different mutation percentage are shown in the above
 
 ## Tokenizer Study
 
-The model name of our study are presented [here](https://github.com/anonymousGithub2022/DeciX/blob/main/model_tokenizer.txt), and the similarity matrix are shown in the following figures
+The model name of our study are presented [here](https://github.com/anonymousGithub2022/DeciX/blob/main/model_tokenizer.txt), and the similarity matrix are shown in the [file](https://github.com/anonymousGithub2022/DeciX/blob/main/fig/cal_new_en_vocab%20(2).csv)
 
 
 
