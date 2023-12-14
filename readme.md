@@ -33,7 +33,11 @@ The model name of our study are presented [here](https://github.com/anonymousGit
 
 ## Commercial Code Model
 
-
+<div  align="center">    
+ <img src="https://github.com/anonymousGithub2022/DeciX/blob/main/fig/gpt-page-002.jpg
+" width="720" height="400" alt="Design Overview"/><br/>
+</div>    
+The evaluation on commercial GPT3.5 model are shown in the above figure, from the results, we can observe that DeciX outperform the baseline methods a significant margin in the ommercial GPT3.5 model.
 
 # DeciX
 
