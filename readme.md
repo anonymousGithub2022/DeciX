@@ -1,6 +1,12 @@
 # Rebuttal 
 
 ## Comparsion against White-box Approaches.
+<div  align="center">    
+ <img src="[https://github.com/anonymousGithub2022/CodeGenExp/blob/main/fig/detail.png](https://github.com/anonymousGithub2022/DeciX/blob/main/fig/white-box-baseline-page-001.jpg
+)" width="720" height="800" alt="Design Overview"/><br/>
+</div>    
+
+The comparsion results against two white-box baselines are presented in the above figure, from the results, we observe that although DeciX does not outperform whitebox baselines. However,DeciX is still comparable against them. Moreover, DeciX is more generable, as these two baselines can not be applied on DeepAPI, which does not use transformer layer.
 
 
 ## Hyperparameter Study
