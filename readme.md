@@ -7,6 +7,10 @@
 
 ## Tokenizer Study
 
+The model name of our study are presented [here](https://github.com/anonymousGithub2022/DeciX/blob/main/model_tokenizer.txt), and the similarity matrix are shown in the following figures
+
+
+
 ## Commercial Code Model
 
 
